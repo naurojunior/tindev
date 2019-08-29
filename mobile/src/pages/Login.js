@@ -24,7 +24,7 @@ export default function Login({ navigation }){
 
         await AyncStorage.setItem('user', _id );
 
-        navigation.navigate('Main', { _id });
+        navigation.navigate('Main', { user: _id });
     }
 
     return (
@@ -33,7 +33,7 @@ export default function Login({ navigation }){
             enabled={Platform.OS === "ios"}
             style={styles.container}>
             <Image source={logo} />
-
+ 
             <TextInput 
             autoCapitalize='none'
             autoCorrect={false}
